@@ -1,0 +1,76 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+body {
+	background-color: #002c2b;
+	padding: 20px;
+}
+
+.header,
+.section {
+	text-align: center;
+	font-size: 2em;
+	margin: 20px;
+	color: #ff3d00;
+}
+
+.weapons {
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.score {
+	margin: 20px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+.player-score p:nth-child(1),
+.computer-score p:nth-child(1) {
+	margin: 20px 0;
+}
+
+#player-score,
+#computer-score {
+	border: 1px solid #ffbc11;
+	border-radius: 1em;
+}
+.weapons button {
+	all: unset;
+	font-size: 3em;
+}
+.weapons button:hover {
+	cursor: pointer;
+}
+
+@keyframes agitar {
+	0% {
+		transform: rotate(0);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+#rock:active,
+#paper:active,
+#scissors:active {
+	animation: agitar 0.5s ease; /* Aplicar la animación cuando se hace clic */
+}
